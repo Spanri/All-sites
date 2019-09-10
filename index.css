@@ -51,13 +51,12 @@ main {
     font-family: 'Roboto Slab', serif;
 }
 
-.item .item__link {
+.item__link {
     margin: 0 30px;
     padding: 15px;
     border-bottom: 2px #4699c0 solid;
-    /* background-color: #46c083; */
 }
 
-.item .item__description {
+.item__description {
     padding: 20px;
 }
