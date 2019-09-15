@@ -41,6 +41,19 @@ var items = [
     descriprtion: 'Страничка о том, почему мой брат - неудачник, но там почти ничего нет.'
   },
   {
+    link: 'http://pstype.herokuapp.com',
+    year: 2018,
+    technologies: 'Vue.js + Typescript, Node.js',
+    layout: 'свой дизайн, не адаптивный, не кроссбраузерный',
+    descriprtion: `
+      Сервер для мобильного приложения подруги для определения 
+      психотипа водителя. Можно посмотреть панель администратора, 
+      написанную на Vue.js.</p>
+      <p>Данные для входа (ломание на вашей совести!):<br>
+      Логин: admin0<br>
+      Пароль: hardpassword`
+  },
+  {
     link: 'https://spanri.github.io/first-site/www/index.html',
     year: 2017,
     technologies: 'jquery, сборщик gulp',

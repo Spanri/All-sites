@@ -54,7 +54,7 @@ main {
 .item__inner {
     height: calc(100% - 15px);
     width: calc(100% - 15px);
-    border:	#4699c08e 15px solid;
+    border:	#ffb71b8e 15px solid;
     z-index: 3;
     margin-top: 10px;
     margin-left: 10px;
@@ -62,10 +62,10 @@ main {
 
 .item__link {
     margin: 0 30px;
-    padding: 15px;
+    padding: 15px 25px 15px 15px;
     border-bottom: 2px #4699c0 solid;
 }
 
 .item__description {
-    padding: 20px;
+    padding: 20px 30px 20px 20px;
 }
