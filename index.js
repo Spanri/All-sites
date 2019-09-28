@@ -74,18 +74,16 @@ var html = '';
 for(i in items) {
   html += (
   `<div class="item">
-    <div class="item__inner">
-      <p class="item__link">
-        <a href="${items[i].link}" target="_blank">
-          ${items[i].link}
-        </a>
-      </p>
-      <div class="item__description">
-        <p>Год: ${items[i].year}</p>
-        <p>Технологии: ${items[i].technologies}</p>
-        <p>Верстка: ${items[i].layout}</p>
-        <p>Описание: ${items[i].descriprtion}</p>
-      </div>
+    <p class="item__link">
+      <a href="${items[i].link}" target="_blank">
+        ${items[i].link}
+      </a>
+    </p>
+    <div class="item__description">
+      <p>Год: ${items[i].year}</p>
+      <p>Технологии: ${items[i].technologies}</p>
+      <p>Верстка: ${items[i].layout}</p>
+      <p>Описание: ${items[i].descriprtion}</p>
     </div>
   </div>`);
 }
