@@ -1,6 +1,20 @@
 var wrapper = document.getElementById("block-wrapper");
 var items = [
   {
+    link: 'https://spanri.gitlab.io/westb/',
+    year: 2019,
+    technologies: 'Vue.js',
+    layout: 'дали макеты дизайна (да, и масштаб там такой), пока что не особо адаптивный, не до конца кроссбраузерный',
+    descriprtion: 'Сайт банка, пока что есть только верстка.'
+  },
+  {
+    link: 'https://spanri.github.io/cart-payment-page/',
+    year: 2019,
+    technologies: 'Vue.js',
+    layout: 'макет не мой, адаптивный, кроссбраузерный',
+    descriprtion: 'Тестовое задание по верстке, пока что там сломано, я переделывала.'
+  },
+  {
     link: 'https://plastic-windows.herokuapp.com',
     year: 2019,
     technologies: 'Vue.js, Flask',
