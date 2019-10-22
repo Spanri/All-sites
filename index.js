@@ -22,7 +22,7 @@ var items = [
     descriprtion: 'Сайт банка, пока что есть только верстка.'
   },
   {
-    link: 'https://spanri.github.io/cart-payment-page/',
+    link: 'https://spanri.github.io/card-payment-page',
     year: 2019,
     technologies: 'Vue.js',
     layout: 'макет не мой, адаптивный, кроссбраузерный',
