@@ -23,10 +23,15 @@ body {
     margin: 0 20px;
 }
 
+::selection {
+    background: #4699c0;
+    color: black;
+}
+
 .header {
     border-top: 2px solid #4699c0;
     /* border-bottom: 2px solid #4699c0; */
-    margin: 10px auto 0;
+    margin: 10px auto 40px;
 
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
@@ -43,6 +48,7 @@ body {
     color: black;
     margin: 20px auto 0;
     width: 250px;
+    user-select: none;
 }
 
 #granim-canvas {
@@ -87,11 +93,32 @@ body {
 .item__link {
     margin: 0 30px;
     padding: 15px;
-    border-bottom: 2px #4699c0 solid;
+    
+    color: white;
+}
+
+.item__link-a {
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
+    font-size: 22px;
+}
+
+.item__link:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+    transition: all ease-in .2s;
+}
+
+.item__link-a:hover {
+    padding: 3px;
+    background: #30708d;
+    color: white;
 }
 
 .item__description {
-    padding: 15px 25px 25px 25px;
+    border-top: 2px #4699c0 solid;
+    padding: 15px 0 25px;
+    margin: 0 30px;
+    font-family: 'Lora', serif;
+    font-size: 20px;
 }

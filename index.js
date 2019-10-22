@@ -103,7 +103,11 @@ for(i in items) {
   html += (
   `<div class="item">
     <p class="item__link">
-      <a href="${items[i].link}" target="_blank">
+      <a
+        class="item__link-a" 
+        href="${items[i].link}" 
+        target="_blank"
+      >
         ${items[i].link}
       </a>
     </p>
