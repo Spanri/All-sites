@@ -1,3 +1,17 @@
+var granimInstance = new Granim({
+  element: '#granim-canvas',
+  name: 'granim',
+  opacity: [1, 1],
+  states: {
+    "default-state": {
+      gradients: [
+        ['#77E1C0', '#D3EDC7'],
+        ['#4699c0', '#93EDC7']
+      ]
+    }
+  }
+});
+
 var wrapper = document.getElementById("block-wrapper");
 var items = [
   {
