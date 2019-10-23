@@ -5,8 +5,8 @@ var granimInstance = new Granim({
   states: {
     "default-state": {
       gradients: [
-        ['#77E1C0', '#D3EDC7'],
-        ['#4699c0', '#93EDC7']
+        ['#ffa2a2', '#fff9a2'],
+        ['#4699c0', '#97c74b']
       ]
     }
   }
@@ -22,18 +22,20 @@ var items = [
     descriprtion: 'Сайт банка, пока что есть только верстка.'
   },
   {
-    link: 'https://spanri.github.io/card-payment-page',
+    link: 'https://infallible-swartz-576d6c.netlify.com',
     year: 2019,
     technologies: 'Vue.js',
     layout: 'макет не мой, адаптивный, кроссбраузерный',
-    descriprtion: 'Тестовое задание по верстке, пока что там сломано, я переделывала.'
+    descriprtion: 'Тестовое задание по верстке, пока что там сломано, я переделывала.',
+    code: 'https://github.com/Spanri/card-payment-page',
   },
   {
     link: 'https://plastic-windows.herokuapp.com',
     year: 2019,
     technologies: 'Vue.js, Flask',
     layout: 'переделанный дизайн шаблона, адаптивный, не особо кроссбраузерный',
-    descriprtion: 'Интернет-магазин пластиковых окон, который не закончен.'
+    descriprtion: 'Интернет-магазин пластиковых окон, который не закончен.',
+    code: 'https://github.com/Spanri/windows',
   },
   {
     link: 'http://edms-mtuci.herokuapp.com',
@@ -45,28 +47,32 @@ var items = [
       на фронте некоторые кнопки работают неправильно.</p>
       <p>Данные для входа (ломание на вашей совести!):<br>
       Логин: opachki9v@mail.ru<br>
-      Пароль: CT8R3EAE`
+      Пароль: CT8R3EAE`,
+    code: 'https://github.com/Spanri/CRM-diplom',
   },
   {
     link: 'https://spanri.github.io/bml/',
     year: '2019 (идея из 2017)',
     technologies: 'Nuxt.js',
     layout: 'свой дизайн, адаптивный, кроссбраузерный',
-    descriprtion: 'Просто страничка я сама не знаю о чём.'
+    descriprtion: 'Просто страничка я сама не знаю о чём.',
+    code: 'https://github.com/Spanri/bml',
   },
   {
     link: 'https://spanri.github.io/react-landing/',
     year: 2019,
     technologies: 'React',
     layout: 'свой дизайн, адаптивный, не особо кроссбраузерный',
-    descriprtion: 'Страничка для друга.'
+    descriprtion: 'Страничка для друга.',
+    code: 'https://github.com/Spanri/react-landing',
   },
   {
     link: 'https://spanri.github.io/design/',
     year: 2018,
     technologies: 'без фреймворков и сборщиков',
     layout: 'свой дизайн, адаптивный, не кроссбраузерный',
-    descriprtion: 'Страничка о том, почему мой брат - неудачник, но там почти ничего нет.'
+    descriprtion: 'Страничка о том, почему мой брат - неудачник, но там почти ничего нет.',
+    code: 'https://github.com/Spanri/design',
   },
   {
     link: 'http://pstype.herokuapp.com',
@@ -79,32 +85,43 @@ var items = [
       написанную на Vue.js.</p>
       <p>Данные для входа (ломание на вашей совести!):<br>
       Логин: admin0<br>
-      Пароль: hardpassword`
+      Пароль: hardpassword`,
+    code: 'https://github.com/Spanri/PS-type',
   },
   {
     link: 'https://spanri.github.io/first-site/www/index.html',
     year: 2017,
     technologies: 'jquery, сборщик gulp',
     layout: 'свой дизайн, удивительно, но адаптивный, не кроссбраузерный',
-    descriprtion: 'Самый первый мой сайт. Там всё плохо, но ностальгично.'
+    descriprtion: 'Самый первый мой сайт. Там всё плохо, но ностальгично.',
+    code: 'https://github.com/Spanri/first-site',
   },
   {
     link: 'https://spanri.github.io/first-site/www/pers/pers.html',
     year: 2017,
     technologies: 'jquery, без сборщика',
     layout: 'свой дизайн, адаптивный, не кроссбраузерный',
-    descriprtion: 'Страничка о моих персонажах (из рисования). Картинки для сайта так и не дорисовала.'
+    descriprtion: 'Страничка о моих персонажах (из рисования). Картинки для сайта так и не дорисовала.',
+    code: 'https://github.com/Spanri/first-site',
   }
 ];
 
 var html = '';
 
 for(i in items) {
+  let codeLink = (
+  `<a class="a item__description-a"
+      href="${items[i].code}"
+      target="_blank"
+    >
+      ${items[i].code}
+    </a>
+  `)
   html += (
   `<div class="item">
     <p class="item__link">
       <a
-        class="item__link-a" 
+        class="a item__link-a" 
         href="${items[i].link}" 
         target="_blank"
       >
@@ -116,6 +133,7 @@ for(i in items) {
       <p>Технологии: ${items[i].technologies}</p>
       <p>Верстка: ${items[i].layout}</p>
       <p>Описание: ${items[i].descriprtion}</p>
+      <p>Код: ${items[i].code ? codeLink : 'не доступен'}</p>
     </div>
   </div>`);
 }

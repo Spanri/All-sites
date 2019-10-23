@@ -29,9 +29,10 @@ body {
 }
 
 .header {
-    border-top: 2px solid #4699c0;
-    /* border-bottom: 2px solid #4699c0; */
-    margin: 10px auto 40px;
+    border-top: 2px solid transparent;
+    margin: 30px auto 40px;
+    transition: all 1s ease;
+    user-select: none;
 
     font-family: 'Amatic SC', cursive;
     font-size: 30px;
@@ -42,13 +43,27 @@ body {
     
     position: relative;
     overflow: hidden;
+
+    background: radial-gradient(circle at center, transparent 20px, white 25%);
+    background-size: 190% 190%;
+    background-position: 50% 50%;
+}
+
+.header:hover {
+  background-size: 400% 400%;
 }
 
 .header__text {
     color: black;
-    margin: 20px auto 0;
+    margin: 15px auto 0;
     width: 250px;
-    user-select: none;
+    font-weight: bold;
+}
+
+.header__subtext {
+    color: black;
+    font-size: 20px;
+    margin-top: 2px;
 }
 
 #granim-canvas {
@@ -60,8 +75,6 @@ body {
     background-size: cover;
     top: -200px;
     left: 0;
-
-    clip-path: circle(150px at center);
 }
 
 #block-wrapper {
@@ -93,24 +106,23 @@ body {
 .item__link {
     margin: 0 30px;
     padding: 15px;
-    
     color: white;
-}
-
-.item__link-a {
-    font-family: 'Amatic SC', cursive;
-    font-weight: bold;
-    font-size: 22px;
 }
 
 .item__link:hover {
     cursor: pointer;
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
     transition: all ease-in .2s;
 }
 
-.item__link-a:hover {
+.a {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 22px;
     padding: 3px;
+}
+
+.a:hover {
     background: #30708d;
     color: white;
 }
