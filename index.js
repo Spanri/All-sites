@@ -15,7 +15,7 @@ var granimInstance = new Granim({
 var wrapper = document.getElementById("block-wrapper");
 var items = [
   {
-    link: 'https://spanri.gitlab.io/westb/',
+    link: 'https://zen-heisenberg-11c203.netlify.com',
     year: 2019,
     technologies: 'Vue.js',
     layout: 'дали макеты дизайна, пока что не особо адаптивный, не до конца кроссбраузерный',
