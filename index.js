@@ -15,11 +15,11 @@ var granimInstance = new Granim({
 var wrapper = document.getElementById("block-wrapper");
 var items = [
   {
-    link: 'https://zen-heisenberg-11c203.netlify.com',
+    link: 'https://spanri.gitlab.io/westb/',
     year: 2019,
     technologies: 'Vue.js',
-    layout: 'дали макеты дизайна, пока что не особо адаптивный, не до конца кроссбраузерный',
-    descriprtion: 'Сайт банка, пока что есть только верстка.'
+    layout: 'дали макеты дизайна, адаптивный, кроссбраузерный',
+    descriprtion: 'Сайт банка, только верстка. Примечание: в гитлабе если обновить страницу не по корню, выдаст ошибку (то есть с vue-router не работает).'
   },
   {
     link: 'https://infallible-swartz-576d6c.netlify.com',
@@ -110,7 +110,7 @@ var html = '';
 
 for(i in items) {
   let codeLink = (
-  `<a class="a item__description-a"
+  `<a class="item__description-a"
       href="${items[i].code}"
       target="_blank"
     >
@@ -119,9 +119,10 @@ for(i in items) {
   `)
   html += (
   `<div class="item">
+    <div class="item__design-element"></div>
     <p class="item__link">
       <a
-        class="a item__link-a" 
+        class="item__link-a"
         href="${items[i].link}" 
         target="_blank"
       >

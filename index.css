@@ -25,51 +25,15 @@ body {
 
 ::selection {
     background: #4699c0;
-    color: black;
+    color: white;
 }
 
-.header {
-    border-top: 2px solid transparent;
-    margin: 30px auto 40px;
-    transition: all 1s ease;
-    user-select: none;
-
-    font-family: 'Amatic SC', cursive;
-    font-size: 30px;
-    text-align: center;
-
-    max-width: 1350px;
-    height: 100px;
-    
-    position: relative;
-    overflow: hidden;
-
-    background: radial-gradient(circle at center, transparent 20px, white 25%);
-    background-size: 190% 190%;
-    background-position: 50% 50%;
-}
-
-.header:hover {
-  background-size: 400% 400%;
-}
-
-.header__text {
-    color: black;
-    margin: 15px auto 0;
-    width: 250px;
-    font-weight: bold;
-}
-
-.header__subtext {
-    color: black;
-    font-size: 20px;
-    margin-top: 2px;
-}
+/* Градиент */
 
 #granim-canvas {
     position: absolute;
     width: 100%;
-    max-width: 1350px;
+    max-width: calc((100vw - 1350px) / 2 + 700px);
     height: 300px;
     z-index: -1;
     background-size: cover;
@@ -77,60 +41,144 @@ body {
     left: 0;
 }
 
+/* Вся верхняя часть */
+
+.top-block {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Шапка в виде градиента и заголовка */
+
+.header-wrapper {
+    width: 100%;
+}
+
+.header {
+    border-top: 2px solid transparent;
+    margin: 30px 0 20px;
+    transition: all 1s ease;
+    user-select: none;
+    max-width: calc((100vw - 1350px) / 2 + 670px);
+
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    text-align: center;
+}
+
+.header__text {
+    margin: 35px 15px 30px;
+    float: right;
+    width: 250px;
+
+    font-weight: bold;
+    text-align: right;
+    color: black;
+}
+
+@media (max-width: 500px) {
+    #granim-canvas {
+        max-width: calc((100vw - 1350px) / 2 + 710px);
+    }
+
+    .header {
+        max-width: calc((100vw - 1350px) / 2 + 700px);
+    }
+}
+
+/* Заметки от меня */
+
+.description {
+    font-family: 'Lora', serif;
+}
+
+/* Основная часть */
+
 #block-wrapper {
     column-width: 400px;
     column-gap: 25px;
     max-width: 1350px;
-    margin: 20px auto;
+    margin: 30px auto;
 }
+
+/* Карточка */
 
 .item {
     -webkit-column-break-inside: avoid;
     break-inside: avoid-column;
     page-break-inside: avoid;
-    margin: 0 auto 25px;
+    margin: 0 auto 50px;
     padding: 0px;
     background-color: white;
-    text-align: center;
     box-shadow: 0 0 10px rgba(153, 153, 153, 0.479);
-    background-image: url('./img/background.png');
-    background-position: 100% 100%;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+
     color: rgb(33, 36, 36);
-    font-family: 'Roboto Slab', serif;
+    text-align: center;
+
+    position: relative;
+    z-index: 3;
+}
+
+.item__design-element {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    background: #dddd8f;
+    z-index: 2;
 }
 
 .item__link {
     margin: 0 30px;
-    padding: 15px;
+    padding: 0px;
+    
+    position: relative;
+    top: -20px;
+    left: 0;
+    z-index: 3;
+
+    text-align: left;
     color: white;
 }
 
 .item__link:hover {
     cursor: pointer;
-    /* transform: scale(1.2); */
     transition: all ease-in .2s;
 }
 
-.a {
+.item__link-a, .item__description-a {
     font-family: 'Amatic SC', cursive;
     font-weight: bold;
-    font-size: 22px;
+    font-size: 28px;
+    color: white;
+
     padding: 3px;
 }
 
-.a:hover {
+.item__link-a {
     background: #30708d;
-    color: white;
 }
+
+.item__description-a {
+    background: #74b382;
+}
+
+.item__link-a:hover, .item__description-a:hover {
+    cursor: pointer;
+    background: white;
+    color: #30708d;
+}
+
+
 
 .item__description {
     border-top: 2px #4699c0 solid;
-    padding: 15px 0 25px;
-    margin: 0 30px;
+    padding: 15px 0 15px 10%;
+    width: 80%;
+
     font-family: 'Lora', serif;
     font-size: 20px;
+    text-align: right;
+
+    position: relative;
+    z-index: 3;
 }

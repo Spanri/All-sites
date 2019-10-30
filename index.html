@@ -9,11 +9,19 @@
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Lora|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <canvas id="granim-canvas" class="header__gradient"></canvas>
-        <p class="header__text">Сделано Аней!</p>
-        <p class="header__subtext">Наведи на этот блок</p>
-    </header>
+    <div class="top-block">
+        <div class="header-wrapper">
+            <canvas id="granim-canvas" class="gradient"></canvas>
+            <header class="header">
+                <p class="header__text">Сделано Аней!</p>
+            </header>
+        </div>
+        <div class="description">
+            <p class="description__text">
+                Если что-то не работает, то простите!
+            </p>
+        </div>
+    </div>
     <main id="block-wrapper"></main>
     <script src="granim.min.js"></script>
     <script src="index.js"></script>
