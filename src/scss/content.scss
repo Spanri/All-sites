@@ -1,9 +1,13 @@
 /* Основная часть */
 
+.for-IE {
+  column-width: 400px;
+  max-width: 1350px;
+  margin: 30px auto;
+}
+
 #block-wrapper {
   column-width: 400px;
-  column-gap: 25px;
-  column-count: 3;
   max-width: 1350px;
   margin: 30px auto;
 }
@@ -17,7 +21,7 @@
   break-inside: avoid-column;
   page-break-inside: avoid;
   page-break-before: avoid;
-  margin: 30px auto 30px;
+  margin: 30px 15px;
   padding: 0px;
   background-color: white;
   box-shadow: 0 0 10px rgba(153, 153, 153, 0.479);
