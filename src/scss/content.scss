@@ -3,6 +3,7 @@
 #block-wrapper {
   column-width: 400px;
   column-gap: 25px;
+  column-count: 3;
   max-width: 1350px;
   margin: 30px auto;
 }
@@ -10,16 +11,18 @@
 /* Карточка */
 
 .item {
+  display: inline-block;
+
   -webkit-column-break-inside: avoid;
   break-inside: avoid-column;
   page-break-inside: avoid;
-  margin: 50px auto 50px;
+  page-break-before: avoid;
+  margin: 30px auto 30px;
   padding: 0px;
   background-color: white;
   box-shadow: 0 0 10px rgba(153, 153, 153, 0.479);
 
   color: rgb(33, 36, 36);
-  text-align: center;
 
   position: relative;
   z-index: 3;
