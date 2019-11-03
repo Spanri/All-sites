@@ -1,15 +1,15 @@
 var granimInstance = new Granim({
   element: '#granim-canvas',
   name: 'granim',
-  opacity: [1, 1],
+  opacity: [1, 1,],
   states: {
     "default-state": {
       gradients: [
-        ['#ffa2a2', '#fff9a2'],
-        ['#4699c0', '#97c74b']
-      ]
-    }
-  }
+        ['#ffa2a2', '#fff9a2',],
+        ['#4699c0', '#97c74b',],
+      ],
+    },
+  },
 });
 
 var wrapper = document.getElementById("block-wrapper");
@@ -19,7 +19,7 @@ var items = [
     year: 2019,
     technologies: 'Vue.js',
     layout: 'дали макеты дизайна, адаптивный, кроссбраузерный',
-    descriprtion: 'Сайт банка, только верстка. Примечание: в гитлабе если обновить страницу не по корню, выдаст ошибку (то есть с vue-router не работает).'
+    descriprtion: 'Сайт банка, только верстка. Примечание: в гитлабе если обновить страницу не по корню, выдаст ошибку (то есть с vue-router не работает).',
   },
   {
     link: 'https://infallible-swartz-576d6c.netlify.com',
@@ -103,12 +103,12 @@ var items = [
     layout: 'свой дизайн, адаптивный, не кроссбраузерный',
     descriprtion: 'Страничка о моих персонажах (из рисования). Картинки для сайта так и не дорисовала.',
     code: 'https://github.com/Spanri/first-site',
-  }
+  },
 ];
 
 var html = '';
 
-for(i in items) {
+for(let i in items) {
   let codeLink = (
   `<a class="item__description-a"
       href="${items[i].code}"

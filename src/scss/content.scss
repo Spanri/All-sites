@@ -1,0 +1,90 @@
+/* Основная часть */
+
+#block-wrapper {
+  column-width: 400px;
+  column-gap: 25px;
+  max-width: 1350px;
+  margin: 30px auto;
+}
+
+/* Карточка */
+
+.item {
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid-column;
+  page-break-inside: avoid;
+  margin: 50px auto 50px;
+  padding: 0px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(153, 153, 153, 0.479);
+
+  color: rgb(33, 36, 36);
+  text-align: center;
+
+  position: relative;
+  z-index: 3;
+
+  &__design-element {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    background: #dddd8f;
+    z-index: 2;
+  }
+
+  &__link {
+    margin: 0 30px;
+    padding: 0px;
+    
+    position: relative;
+    top: -20px;
+    left: 0;
+    z-index: 3;
+
+    text-align: left;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+      transition: all ease-in .2s;
+    }
+
+  }
+
+  &__link-a, &__description-a {
+    font-family: 'Amatic SC', cursive;
+    font-weight: bold;
+    font-size: 28px;
+    color: white;
+
+    padding: 3px;
+  }
+
+  &__link-a {
+    background: #30708d;
+  }
+
+  &__description-a {
+    background: #74b382;
+  }
+
+  &__link-a:hover, &__description-a:hover {
+    cursor: pointer;
+    background: white;
+    color: #30708d;
+  }
+
+  &__description {
+    border-top: 2px #4699c0 solid;
+    padding: 15px 0 15px 10%;
+    width: 80%;
+
+    font-family: 'Lora', serif;
+    font-size: 20px;
+    text-align: right;
+
+    position: relative;
+    z-index: 3;
+  }
+
+}
