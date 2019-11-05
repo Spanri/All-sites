@@ -9,7 +9,6 @@
 #block-wrapper {
   column-width: 400px;
   max-width: 1350px;
-  margin: 30px auto;
 }
 
 /* Карточка */
@@ -22,10 +21,11 @@
   page-break-inside: avoid;
   page-break-before: avoid;
   margin: 30px 15px;
-  padding: 0px;
+  padding: 0;
   background-color: white;
   box-shadow: 0 0 10px rgba(153, 153, 153, 0.479);
 
+  box-sizing: border-box;
   color: rgb(33, 36, 36);
 
   position: relative;

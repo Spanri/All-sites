@@ -30,6 +30,14 @@ var items = [
     code: 'https://github.com/Spanri/card-payment-page',
   },
   {
+    link: 'https://spanri.github.io',
+    year: 2019,
+    technologies: 'native js, сборщик webpack',
+    layout: 'свой дизайн, адаптивный, кроссбраузерный',
+    descriprtion: 'Страничка, которую вы видите перед собой.',
+    code: 'https://github.com/Spanri/Spanri.github.io',
+  },
+  {
     link: 'https://plastic-windows.herokuapp.com',
     year: 2019,
     technologies: 'Vue.js, Flask',
