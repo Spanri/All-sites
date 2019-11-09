@@ -34,7 +34,7 @@
   &__design-element {
     position: absolute;
     width: 90%;
-    height: 50%;
+    height: 200px;
     background: #dddd8f;
     z-index: 2;
   }
@@ -92,6 +92,14 @@
 
     position: relative;
     z-index: 3;
+  }
+
+}
+
+@media (max-width: 855px) {
+
+  .item {
+    width: calc(100% - 35px);
   }
 
 }
