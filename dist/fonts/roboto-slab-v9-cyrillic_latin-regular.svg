@@ -1,0 +1,1 @@
+module.exports = __webpack_public_path__ + "img/roboto-slab-v9-cyrillic_latin-regular.svg";
