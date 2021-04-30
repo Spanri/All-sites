@@ -5,6 +5,7 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --mode development --hot",
+    "predeploy": "webpack",
     "deploy": "gh-pages -b master -d dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
