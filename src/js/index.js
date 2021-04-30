@@ -118,31 +118,53 @@ var html = '';
 
 for(let i in items) {
   let codeLink = (
-  `<a class="item__description-a"
-      href="${items[i].code}"
-      target="_blank"
-    >
-      ${items[i].code}
-    </a>
-  `)
-  html += (
-  `<div class="item">
-    <div class="item__design-element"></div>
-    <p class="item__link">
-      <a
-        class="item__link-a"
-        href="${items[i].link}" 
+    
+  `<div class="item__code-link-wrapper">
+      <a class="item__code-link"
+        href="${items[i].code}"
         target="_blank"
       >
-        ${items[i].link}
+        ${items[i].code}
       </a>
-    </p>
+    </div>
+  `)
+
+  html += (
+  `<div class="item">
+    <div class="item__header">
+      <div class="item__index">${+i + 1}</div>
+      <div class="item__link-wrapper">
+        <a class="item__link" href="${items[i].link}" target="_blank">
+          ${items[i].link}
+        </a>
+      </div>
+    </div>
+    
+
     <div class="item__description">
-      <p>Год: ${items[i].year}</p>
-      <p>Технологии: ${items[i].technologies}</p>
-      <p>Верстка: ${items[i].layout}</p>
-      <p>Описание: ${items[i].descriprtion}</p>    
-      <p>Код: ${items[i].code ? codeLink : 'недоступен'}</p>
+      <div class="item__design-element">
+        <div class="block">
+          <span class="block__label">Год: </span>
+          <span class="block__value">${items[i].year}</span>
+        </div>
+        <div class="block">
+          <span class="block__label">Технологии: </span>
+          <span class="block__value">${items[i].technologies}</span>
+        </div>
+        <div class="block">
+          <span class="block__label">Верстка: </span>
+          <span class="block__value">${items[i].layout}</span>
+        </div>
+      </div>
+
+      <div class="block">
+        <span class="block__label">Описание: </span>
+        <span class="block__value">${items[i].descriprtion}</span>
+      </div>
+      <div class="block item__code">
+        <span class="block__label">Код: </span>
+        <span class="block__value">${items[i].code ? codeLink : 'недоступен'}</span>
+      </div>
     </div>
   </div>`);
 }
