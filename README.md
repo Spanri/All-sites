@@ -1,3 +1,5 @@
-### Где ссылки?
+### Где посмотреть сайт?
 
-[Кликай сюда](https://spanri.github.io).
+[https://spanri.github.io](https://spanri.github.io)
+
+Сделано с помощью Vite.
