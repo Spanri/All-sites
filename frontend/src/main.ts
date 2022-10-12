@@ -13,25 +13,21 @@ interface ItemType {
 
 const itemsOld = [
   {
+    code: "https://github.com/Spanri/drawanri/tree/main",
+  },
+  {
+    code: "https://github.com/Spanri/custom-map",
+  },
+  {
+    code: "https://github.com/Dust-Games/frontend",
+  },
+  {
     link: "https://plastic-windows.herokuapp.com",
     year: 2019,
     technologies: "Vue.js, Flask",
     layout: "переделанный дизайн шаблона, адаптивный, не особо кроссбраузерный",
     descriprtion: "Интернет-магазин пластиковых окон, который не закончен.",
     code: "https://github.com/Spanri/windows",
-  },
-  {
-    link: "http://edms-mtuci.herokuapp.com",
-    year: 2019,
-    technologies: "Vue.js, Django (DRF)",
-    layout: "свой дизайн, не адаптивный, не кроссбраузерный",
-    descriprtion: `
-      Диплом, система электронного документооборота. На сервере всё плохо, поэтому
-      на фронте некоторые кнопки работают неправильно.</p>
-      <p>Данные для входа (ломание на вашей совести!):<br>
-      Логин: opachki9v@mail.ru<br>
-      Пароль: CT8R3EAE`,
-    code: "https://github.com/Spanri/CRM-diplom",
   },
   {
     link: "http://pstype.herokuapp.com",
@@ -68,6 +64,50 @@ const items: ItemType[] = [
     tags: ["Vue", "Typescript", "Docker", "design"],
     text: "Проект на работе. Данные для входа дать не могу, можете посмотреть страницу входа))",
     linkSite: "https://dooh.oohdesk.ru",
+  },
+  {
+    id: "ffmpeg",
+    title: "Image2Video",
+    image: "",
+    year: 2020,
+    tags: ["React", "ffmpeg", "design"],
+    text: "Конвертор из картинки в видео. Работает очень медленно, потому что иначе ffmpeg без бэка не умеет.",
+    linkSite: "https://spanri.github.io/ffmpeg-react/",
+    linkCode: "https://github.com/Spanri/ffmpeg-react",
+  },
+  {
+    id: "custom-map",
+    title: "Кастомная карта",
+    image: "",
+    year: 2020,
+    tags: ["typescript", "rollup"],
+    text: "Кастомная карта с возможностью добавления своего сета тайлов. Хотела повторить гугл-карты))",
+    linkSite: "лень размещать",
+    linkCode: "https://github.com/Spanri/custom-map",
+  },
+  {
+    id: "fuzzy-logic",
+    title: "Проект по нечеткой логике",
+    image: "",
+    year: 2019,
+    tags: ["Vue"],
+    text: "Выбор стола. Вводится высота стола, ширина, материал и количество места для протягивания ног. Выводится, стоит ли сидеть за таким столом.",
+    linkSite: "https://spanri.github.io/find-table/",
+    linkCode: "https://github.com/Spanri/find-table",
+  },
+  {
+    id: "edms",
+    title: "Система электронного документооборота",
+    image: "",
+    year: 2019,
+    tags: ["Vue", "Django (DRF)", "design"],
+    text: `
+      Диплом. На сервере всё плохо (бд была на флешке в роутере, но я ее отключила).<br/>
+      Логин: <strong>opachki9v@mail.ru<br></strong>
+      Пароль: <strong>CT8R3EAE</strong>
+    `,
+    linkSite: "http://edms-mtuci.herokuapp.com",
+    linkCode: "https://github.com/Spanri/CRM-diplom",
   },
   {
     id: "test-payments",
@@ -152,7 +192,7 @@ const getItem = (item: ItemType) => `
       <div class="item__header-description">
         <span class="item__year">${item.year} год</span>
         <span class="item__tags">${item.tags
-          .map((tag) => "#" + tag)
+          .map((tag) => `<span class="item__tags-item">#${tag}</span>`)
           .join(" ")}</span>
       </div>
 
