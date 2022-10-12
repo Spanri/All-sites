@@ -13,31 +13,6 @@ interface ItemType {
 
 const itemsOld = [
   {
-    link: "https://spanri.gitlab.io/westb/",
-    year: 2019,
-    technologies: "Vue.js",
-    layout: "дали макеты дизайна, адаптивный, кроссбраузерный (IE11+)",
-    descriprtion:
-      "Сайт банка, только верстка. Вход и аутентификация пройдут при любых значениях (но минимальная валидация в регистрации все равно есть).<br><br>После входа/регистрации есть кнопки Онлайн-банк/Переводы, там прикольная анимация и еще в Переводах анимация переключения 1/2/3 неплохая! <br><br>Примечание: в гитлабе если обновить страницу не по корню, выдаст ошибку (то есть с vue-router не работает).",
-  },
-  {
-    link: "https://infallible-swartz-576d6c.netlify.com",
-    year: 2019,
-    technologies: "Vue.js",
-    layout: "макет не мой, адаптивный, кроссбраузерный (IE11+)",
-    descriprtion:
-      "Тестовое задание по верстке. (На нетлифай иногда страница не загружается, а через несколько минут загружается, как я поняла, оно выходит из сна)",
-    code: "https://github.com/Spanri/card-payment-page",
-  },
-  {
-    link: "https://spanri.github.io",
-    year: 2019,
-    technologies: "нативный js, webpack",
-    layout: "свой дизайн, адаптивный, кроссбраузерный (IE11+)",
-    descriprtion: "Страничка, которую вы видите перед собой.",
-    code: "https://github.com/Spanri/Spanri.github.io",
-  },
-  {
     link: "https://plastic-windows.herokuapp.com",
     year: 2019,
     technologies: "Vue.js, Flask",
@@ -59,31 +34,6 @@ const itemsOld = [
     code: "https://github.com/Spanri/CRM-diplom",
   },
   {
-    link: "https://spanri.github.io/bml/",
-    year: "2019 (идея из 2017)",
-    technologies: "Nuxt.js",
-    layout: "свой дизайн, адаптивный, кроссбраузерный (IE11+)",
-    descriprtion: "Просто страничка я сама не знаю о чём.",
-    code: "https://github.com/Spanri/bml",
-  },
-  {
-    link: "https://spanri.github.io/react-landing/",
-    year: 2019,
-    technologies: "React",
-    layout: "свой дизайн, адаптивный, не особо кроссбраузерный",
-    descriprtion: "Страничка для друга.",
-    code: "https://github.com/Spanri/react-landing",
-  },
-  {
-    link: "https://spanri.github.io/design/",
-    year: 2018,
-    technologies: "без фреймворков и сборщиков",
-    layout: "свой дизайн, адаптивный, не кроссбраузерный",
-    descriprtion:
-      "Страничка о том, почему мой брат - неудачник, но там почти ничего нет.",
-    code: "https://github.com/Spanri/design",
-  },
-  {
     link: "http://pstype.herokuapp.com",
     year: 2018,
     technologies: "Vue.js + Typescript, Node.js",
@@ -97,46 +47,98 @@ const itemsOld = [
       Пароль: hardpassword`,
     code: "https://github.com/Spanri/PS-type",
   },
-  {
-    link: "https://spanri.github.io/first-site/www/index.html",
-    year: 2017,
-    technologies: "jquery, сборщик gulp",
-    layout: "свой дизайн, удивительно, но адаптивный, не кроссбраузерный",
-    descriprtion: "Самый первый мой сайт. Там всё плохо, но ностальгично.",
-    code: "https://github.com/Spanri/first-site",
-  },
-  {
-    link: "https://spanri.github.io/first-site/www/pers/pers.html",
-    year: 2017,
-    technologies: "jquery, без сборщика",
-    layout: "свой дизайн, адаптивный, не кроссбраузерный",
-    descriprtion:
-      "Страничка о моих персонажах (из рисования). Картинки для сайта так и не дорисовала.",
-    code: "https://github.com/Spanri/first-site",
-  },
 ];
 
 const items: ItemType[] = [
   {
-    id: "bank-layout",
-    title: "Сайт банка",
+    id: "portfolio",
+    title: "Портфолио",
     image: "",
-    year: 2019,
-    tags: ["frontend", "Vue"],
-    text: `Только верстка. Дали макеты дизайна, адаптивная, кроссбраузерная (IE11+) верстка.
-        Вход и аутентификация пройдут при любых значениях (но минимальная валидация в регистрации все равно есть).
-        После входа/регистрации есть кнопки Онлайн-банк/Переводы, там прикольная анимация и еще в Переводах анимация переключения 1/2/3 неплохая!
-        
-        Примечание: в гитлабе если обновить страницу не по корню, выдаст ошибку (то есть с vue-router не работает).`,
+    year: 2022,
+    tags: ["Vite", "design"],
+    text: "Придумала дизайн, заверстала, наполнила контентом.",
+    linkSite: "https://spanri.github.io",
+    linkCode: "https://github.com/Spanri/Spanri.github.io",
   },
   {
-    id: "12",
-    title: "Сайт банка 2",
+    id: "oohdesk",
+    title: "Oohdesk DSP",
+    image: "",
+    year: 2022,
+    tags: ["Vue", "Typescript", "Docker", "design"],
+    text: "Проект на работе. Данные для входа дать не могу, можете посмотреть страницу входа))",
+    linkSite: "https://dooh.oohdesk.ru",
+  },
+  {
+    id: "test-payments",
+    title: "Вёрстка платежей",
     image: "",
     year: 2019,
-    tags: ["frontend", "Vue"],
-    text: "",
-    linkSite: "https://github.com/Spanri/card-payment-page",
+    tags: ["Vue"],
+    text: "Тестовое задание по верстке.",
+    linkSite: "https://infallible-swartz-576d6c.netlify.com",
+    linkCode: "https://github.com/Spanri/card-payment-page",
+  },
+  {
+    id: "bank-layout",
+    title: "Вёрстка сайта банка",
+    image: "",
+    year: 2019,
+    tags: ["Vue"],
+    text: `
+      Дизайн не мой. Дали макеты - заверстала.<br/>
+      Вход и аутентификация пройдут при любых значениях (но минимальная валидация в регистрации все равно есть).
+    `,
+    linkSite: "https://spanri.gitlab.io/westb/",
+  },
+  {
+    id: "bml",
+    title: "Вёрстка рандомной информации",
+    image: "",
+    year: 2019,
+    tags: ["Nuxt.js", "design"],
+    text: "Рассказала, что такое модель движения по маршруту Бим-Миддлтон-Левин. Кажется, это нужно было для курсовой и мне показалось смешным заверстать инфу.",
+    linkSite: "https://spanri.github.io/bml/",
+    linkCode: "https://github.com/Spanri/bml",
+  },
+  {
+    id: "about-my-friend",
+    title: "О моём знакомом",
+    image: "",
+    year: 2019,
+    tags: ["react", "design"],
+    text: "Страничка о моём знакомом (там вёрстка).",
+    linkSite: "https://spanri.github.io/react-landing/",
+    linkCode: "https://github.com/Spanri/react-landing",
+  },
+  {
+    id: "about-brother",
+    title: "О моём брате",
+    image: "",
+    year: 2018,
+    tags: ["vanilla", "design"],
+    text: "Презентация, почему мой брат - неудачник (там вёрстка).",
+    linkSite: "https://spanri.github.io/design/",
+    linkCode: "https://github.com/Spanri/design",
+  },
+  {
+    id: "my-pers",
+    title: "О моих персонажах",
+    image: "",
+    year: 2017,
+    tags: ["jquery", "design"],
+    text: "Не доделано, но я считаю это милым, поэтому можете полюбоваться. Картинки сама рисовала.",
+    linkSite: "https://spanri.github.io/first-site/www/pers/pers.html",
+  },
+  {
+    id: "my-first-site",
+    title: "Мой первый сайт",
+    image: "",
+    year: 2017,
+    tags: ["jquery", "gulp", "design"],
+    text: "Просто забавно, поэтому зацените.",
+    linkSite: "https://spanri.github.io/first-site/www/index.html",
+    linkCode: "https://github.com/Spanri/first-site",
   },
 ];
 
@@ -158,12 +160,12 @@ const getItem = (item: ItemType) => `
 
       <div class="item__link-site">Сайт: ${
         item.linkSite
-          ? `<a>${item.linkSite}</a>`
+          ? `<a href="${item.linkSite}">${item.linkSite}</a>`
           : '<span class="item__empty">Недоступно</span>'
       }</div>
       <div class="item__link-code">Код: ${
         item.linkCode
-          ? `<a>${item.linkCode}</a>`
+          ? `<a href="${item.linkCode}">${item.linkCode}</a>`
           : '<span class="item__empty">Недоступно</span>'
       }</div>
     </div>
