@@ -155,18 +155,35 @@ h6 {
   }
 
   &__image {
-    width: 200px;
-    height: 200px;
-    border-radius: 2rem;
-    margin-right: 1.5rem;
+    max-height: 100%;
 
-    @media (max-width: 800px) {
-      width: 150px;
-      height: 150px;
-    }
+    &-wrapper {
+      width: 200px;
+      min-width: 200px;
+      height: 200px;
+      border-radius: 3rem;
+      margin-right: 1.5rem;
+      border: 1px solid var(--green-blue);
+      overflow: hidden;
 
-    @media (max-width: 500px) {
-      margin-right: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 800px) {
+        width: 150px;
+        height: 150px;
+      }
+
+      @media (max-width: 500px) {
+        margin-right: 1rem;
+      }
     }
   }
 
@@ -200,5 +217,27 @@ h6 {
 
   &__empty {
     color: var(--gray);
+  }
+}
+
+#_big-image {
+  max-width: calc(100% - 4rem);
+  max-height: calc(100% - 4rem);
+  border-radius: 2rem;
+  border: 1px solid var(--green-blue);
+
+  &-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: rgba(137, 158, 169, 0.6);
   }
 }

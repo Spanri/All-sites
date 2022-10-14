@@ -1,9 +1,14 @@
 import "./style.scss";
+import imgPortfolio from "./images/portfolio.png";
+import imgOohdesk from "./images/oohdesk.png";
+import imgFfmpeg from "./images/ffmpeg.png";
+import imgFuzzyLogic from "./images/fuzzy-logic.png";
+import imgBml from "./images/bml.png";
 
 interface ItemType {
   id: string;
   title: string;
-  image: string;
+  image: string | null;
   year: number;
   tags: string[];
   text: string;
@@ -49,7 +54,7 @@ const items: ItemType[] = [
   {
     id: "portfolio",
     title: "Портфолио",
-    image: "",
+    image: imgPortfolio,
     year: 2022,
     tags: ["Vite", "design"],
     text: "Придумала дизайн, заверстала, наполнила контентом.",
@@ -59,7 +64,7 @@ const items: ItemType[] = [
   {
     id: "oohdesk",
     title: "Oohdesk DSP",
-    image: "",
+    image: imgOohdesk,
     year: 2022,
     tags: ["Vue", "Typescript", "Docker", "design"],
     text: "Проект на работе. Данные для входа дать не могу, можете посмотреть страницу входа))",
@@ -68,7 +73,7 @@ const items: ItemType[] = [
   {
     id: "ffmpeg",
     title: "Image2Video",
-    image: "",
+    image: imgFfmpeg,
     year: 2020,
     tags: ["React", "ffmpeg", "design"],
     text: "Конвертор из картинки в видео. Работает очень медленно, потому что иначе ffmpeg без бэка не умеет.",
@@ -78,7 +83,7 @@ const items: ItemType[] = [
   {
     id: "custom-map",
     title: "Кастомная карта",
-    image: "",
+    image: null,
     year: 2020,
     tags: ["typescript", "rollup"],
     text: "Кастомная карта с возможностью добавления своего сета тайлов. Хотела повторить гугл-карты))",
@@ -88,7 +93,7 @@ const items: ItemType[] = [
   {
     id: "fuzzy-logic",
     title: "Проект по нечеткой логике",
-    image: "",
+    image: imgFuzzyLogic,
     year: 2019,
     tags: ["Vue"],
     text: "Выбор стола. Вводится высота стола, ширина, материал и количество места для протягивания ног. Выводится, стоит ли сидеть за таким столом.",
@@ -98,7 +103,7 @@ const items: ItemType[] = [
   {
     id: "edms",
     title: "Система электронного документооборота",
-    image: "",
+    image: null,
     year: 2019,
     tags: ["Vue", "Django (DRF)", "design"],
     text: `
@@ -112,7 +117,7 @@ const items: ItemType[] = [
   {
     id: "test-payments",
     title: "Вёрстка платежей",
-    image: "",
+    image: null,
     year: 2019,
     tags: ["Vue"],
     text: "Тестовое задание по верстке.",
@@ -122,7 +127,7 @@ const items: ItemType[] = [
   {
     id: "bank-layout",
     title: "Вёрстка сайта банка",
-    image: "",
+    image: null,
     year: 2019,
     tags: ["Vue"],
     text: `
@@ -134,7 +139,7 @@ const items: ItemType[] = [
   {
     id: "bml",
     title: "Вёрстка рандомной информации",
-    image: "",
+    image: imgBml,
     year: 2019,
     tags: ["Nuxt.js", "design"],
     text: "Рассказала, что такое модель движения по маршруту Бим-Миддлтон-Левин. Кажется, это нужно было для курсовой и мне показалось смешным заверстать инфу.",
@@ -144,7 +149,7 @@ const items: ItemType[] = [
   {
     id: "about-my-friend",
     title: "О моём знакомом",
-    image: "",
+    image: null,
     year: 2019,
     tags: ["react", "design"],
     text: "Страничка о моём знакомом (там вёрстка).",
@@ -154,7 +159,7 @@ const items: ItemType[] = [
   {
     id: "about-brother",
     title: "О моём брате",
-    image: "",
+    image: null,
     year: 2018,
     tags: ["vanilla", "design"],
     text: "Презентация, почему мой брат - неудачник (там вёрстка).",
@@ -164,7 +169,7 @@ const items: ItemType[] = [
   {
     id: "my-pers",
     title: "О моих персонажах",
-    image: "",
+    image: null,
     year: 2017,
     tags: ["jquery", "design"],
     text: "Не доделано, но я считаю это милым, поэтому можете полюбоваться. Картинки сама рисовала.",
@@ -173,7 +178,7 @@ const items: ItemType[] = [
   {
     id: "my-first-site",
     title: "Мой первый сайт",
-    image: "",
+    image: null,
     year: 2017,
     tags: ["jquery", "gulp", "design"],
     text: "Просто забавно, поэтому зацените.",
@@ -184,7 +189,13 @@ const items: ItemType[] = [
 
 const getItem = (item: ItemType) => `
   <div class="item">
-    <img class="item__image" src="${item.image}" />
+    <div class="item__image-wrapper">
+      ${
+        item.image
+          ? `<img class="item__image" src="${item.image}" />`
+          : `<span>Лень скринить</span>`
+      }
+    </div>
 
     <div class="item__content">
       <h2 class="item__title">${item.title}</h2>
@@ -212,6 +223,10 @@ const getItem = (item: ItemType) => `
   </div>
 `;
 
+/**
+ * Определяем основной блок html
+ */
+
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   <div class="header">
     <p class="header__title">Программистское портфолио</p>
@@ -219,4 +234,45 @@ document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
   </div>
 
   ${items.map(getItem).join("")}
+
+  <div id="_big-image-wrapper">
+    <img id="_big-image" />
+  </div>
 `;
+
+/**
+ * Навешиваем слушатели
+ */
+
+const itemElements: any = document.getElementsByClassName("item");
+const itemElementsArray = [...itemElements];
+
+const bigImageWrapperElement = document.getElementById(
+  "_big-image-wrapper"
+)! as HTMLImageElement;
+const bigImageElement = document.getElementById(
+  "_big-image"
+)! as HTMLImageElement;
+
+const clearBigImageWrapperElement = () => {
+  bigImageElement.src = "";
+  bigImageWrapperElement.style.display = "none";
+};
+
+bigImageWrapperElement.addEventListener("click", () => {
+  clearBigImageWrapperElement();
+});
+
+clearBigImageWrapperElement();
+
+itemElementsArray.forEach((itemElement) => {
+  const imageElements = itemElement.getElementsByClassName("item__image");
+  const imageElement = imageElements[0];
+
+  if (imageElement) {
+    imageElement.addEventListener("click", () => {
+      bigImageElement.src = imageElement.src;
+      bigImageWrapperElement.style.display = "flex";
+    });
+  }
+});
