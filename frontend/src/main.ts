@@ -3,6 +3,7 @@ import imgPortfolio from "./images/portfolio.png";
 import imgOohdesk from "./images/oohdesk.png";
 import imgEdmsNew from "./images/edms-new.png";
 import imgFfmpeg from "./images/ffmpeg.png";
+import imgCustomMap from "./images/custom-map.png";
 import imgFuzzyLogic from "./images/fuzzy-logic.png";
 import imgBml from "./images/bml.png";
 import imgEdms from "./images/edms.png";
@@ -101,10 +102,10 @@ const items: ItemType[] = [
   {
     id: "custom-map",
     title: "Кастомная карта",
-    image: null,
+    image: imgCustomMap,
     year: 2020,
     tags: ["typescript", "rollup"],
-    text: "Кастомная карта с возможностью добавления своего сета тайлов. Хотела повторить гугл-карты))",
+    text: "Кастомная карта с возможностью добавления своего сета тайлов. Хотела повторить гугл-карты))<br/>Карту можно двигать (таскать) и увеличивать на 1 пункт масштаба.",
     linkSite: "https://spanri.github.io/custom-map/",
     linkCode: "https://github.com/Spanri/custom-map",
   },

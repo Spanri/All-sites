@@ -77,6 +77,10 @@ h6 {
   display: flex;
   align-items: center;
 
+  @media (max-width: 700px) {
+    border-radius: 2rem;
+  }
+
   @media (max-width: 500px) {
     margin-bottom: 0.5rem;
     padding: 1rem 1.5rem;
@@ -147,6 +151,7 @@ h6 {
 
   @media (max-width: 700px) {
     flex-direction: column;
+    border-radius: 2rem;
   }
 
   @media (max-width: 500px) {
@@ -179,6 +184,12 @@ h6 {
       @media (max-width: 800px) {
         width: 150px;
         height: 150px;
+      }
+
+      @media (max-width: 700px) {
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 1rem;
       }
 
       @media (max-width: 500px) {
