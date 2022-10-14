@@ -1,9 +1,17 @@
 import "./style.scss";
 import imgPortfolio from "./images/portfolio.png";
 import imgOohdesk from "./images/oohdesk.png";
+import imgEdmsNew from "./images/edms-new.png";
 import imgFfmpeg from "./images/ffmpeg.png";
 import imgFuzzyLogic from "./images/fuzzy-logic.png";
 import imgBml from "./images/bml.png";
+import imgEdms from "./images/edms.png";
+import imgPayments from "./images/payments.png";
+import imgWestBank from "./images/west-bank.png";
+import imgAboutMyFriend from "./images/about-my-friend.png";
+import imgAboutMyBrother from "./images/about-my-brother.png";
+import imgAboutMyPers from "./images/about-my-pers.png";
+import imgMyFirstSite from "./images/my-first-site.png";
 
 interface ItemType {
   id: string;
@@ -71,6 +79,16 @@ const items: ItemType[] = [
     linkSite: "https://dooh.oohdesk.ru",
   },
   {
+    id: "edms2",
+    title: "Система электронного документооборота | версия 2",
+    image: imgEdmsNew,
+    year: 2021,
+    tags: ["Vue", "design"],
+    text: "Где-то ниже - версия 1.<br/>Данная версия - переделанный вариант, но меня хватило только на верстку окна аутентификации.",
+    linkSite: "https://edsm-anina.netlify.app/",
+    linkCode: "https://github.com/Spanri/edsm-v2",
+  },
+  {
     id: "ffmpeg",
     title: "Image2Video",
     image: imgFfmpeg,
@@ -87,7 +105,7 @@ const items: ItemType[] = [
     year: 2020,
     tags: ["typescript", "rollup"],
     text: "Кастомная карта с возможностью добавления своего сета тайлов. Хотела повторить гугл-карты))",
-    linkSite: "лень размещать",
+    linkSite: "https://spanri.github.io/custom-map/",
     linkCode: "https://github.com/Spanri/custom-map",
   },
   {
@@ -102,8 +120,8 @@ const items: ItemType[] = [
   },
   {
     id: "edms",
-    title: "Система электронного документооборота",
-    image: null,
+    title: "Система электронного документооборота | версия 1",
+    image: imgEdms,
     year: 2019,
     tags: ["Vue", "Django (DRF)", "design"],
     text: `
@@ -112,22 +130,22 @@ const items: ItemType[] = [
       Пароль: <strong>CT8R3EAE</strong>
     `,
     linkSite: "http://edms-mtuci.herokuapp.com",
-    linkCode: "https://github.com/Spanri/CRM-diplom",
+    linkCode: "https://github.com/Spanri/edsm-v1",
   },
   {
     id: "test-payments",
     title: "Вёрстка платежей",
-    image: null,
+    image: imgPayments,
     year: 2019,
     tags: ["Vue"],
     text: "Тестовое задание по верстке.",
-    linkSite: "https://infallible-swartz-576d6c.netlify.com",
+    linkSite: "https://card-payment-page.netlify.app/",
     linkCode: "https://github.com/Spanri/card-payment-page",
   },
   {
     id: "bank-layout",
     title: "Вёрстка сайта банка",
-    image: null,
+    image: imgWestBank,
     year: 2019,
     tags: ["Vue"],
     text: `
@@ -149,7 +167,7 @@ const items: ItemType[] = [
   {
     id: "about-my-friend",
     title: "О моём знакомом",
-    image: null,
+    image: imgAboutMyFriend,
     year: 2019,
     tags: ["react", "design"],
     text: "Страничка о моём знакомом (там вёрстка).",
@@ -159,7 +177,7 @@ const items: ItemType[] = [
   {
     id: "about-brother",
     title: "О моём брате",
-    image: null,
+    image: imgAboutMyBrother,
     year: 2018,
     tags: ["vanilla", "design"],
     text: "Презентация, почему мой брат - неудачник (там вёрстка).",
@@ -169,7 +187,7 @@ const items: ItemType[] = [
   {
     id: "my-pers",
     title: "О моих персонажах",
-    image: null,
+    image: imgAboutMyPers,
     year: 2017,
     tags: ["jquery", "design"],
     text: "Не доделано, но я считаю это милым, поэтому можете полюбоваться. Картинки сама рисовала.",
@@ -178,7 +196,7 @@ const items: ItemType[] = [
   {
     id: "my-first-site",
     title: "Мой первый сайт",
-    image: null,
+    image: imgMyFirstSite,
     year: 2017,
     tags: ["jquery", "gulp", "design"],
     text: "Просто забавно, поэтому зацените.",
