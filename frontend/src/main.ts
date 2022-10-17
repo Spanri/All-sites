@@ -25,39 +25,22 @@ interface ItemType {
   linkCode?: string;
 }
 
-const itemsOld = [
-  {
-    code: "https://github.com/Spanri/drawanri/tree/main",
-  },
-  {
-    code: "https://github.com/Spanri/custom-map",
-  },
-  {
-    code: "https://github.com/Dust-Games/frontend",
-  },
-  {
-    link: "https://plastic-windows.herokuapp.com",
-    year: 2019,
-    technologies: "Vue.js, Flask",
-    layout: "переделанный дизайн шаблона, адаптивный, не особо кроссбраузерный",
-    descriprtion: "Интернет-магазин пластиковых окон, который не закончен.",
-    code: "https://github.com/Spanri/windows",
-  },
-  {
-    link: "http://pstype.herokuapp.com",
-    year: 2018,
-    technologies: "Vue.js + Typescript, Node.js",
-    layout: "свой дизайн, не адаптивный, не кроссбраузерный",
-    descriprtion: `
-      Сервер для мобильного приложения подруги для определения 
-      психотипа водителя. Можно посмотреть панель администратора, 
-      написанную на Vue.js.<br><br>То, что можно посмотреть, написано без TypeScript, а новая версия еще не доделана.</p>
-      <p>Данные для входа (ломание на вашей совести!):<br>
-      Логин: admin0<br>
-      Пароль: hardpassword`,
-    code: "https://github.com/Spanri/PS-type",
-  },
-];
+// const itemsOld = [
+//   {
+//     code: "https://github.com/Spanri/drawanri/tree/main",
+//   },
+//   {
+//     code: "https://github.com/Dust-Games/frontend",
+//   },
+//   {
+//     link: "https://plastic-windows.herokuapp.com",
+//     year: 2019,
+//     technologies: "Vue.js, Flask",
+//     layout: "переделанный дизайн шаблона, адаптивный, не особо кроссбраузерный",
+//     descriprtion: "Интернет-магазин пластиковых окон, который не закончен.",
+//     code: "https://github.com/Spanri/windows",
+//   },
+// ];
 
 const items: ItemType[] = [
   {
@@ -65,7 +48,7 @@ const items: ItemType[] = [
     title: "Портфолио",
     image: imgPortfolio,
     year: 2022,
-    tags: ["Vite", "design"],
+    tags: ["Vite", "docker", "design"],
     text: "Придумала дизайн, заверстала, наполнила контентом.",
     linkSite: "https://spanri.github.io",
     linkCode: "https://github.com/Spanri/Spanri.github.io",
@@ -127,7 +110,7 @@ const items: ItemType[] = [
     tags: ["Vue", "Django (DRF)", "design"],
     text: `
       Диплом. На сервере всё плохо (бд была на флешке в роутере, но я ее отключила).<br/>
-      Логин: <strong>opachki9v@mail.ru<br></strong>
+      Логин: <strong>opachki9v@mail.ru</strong><br>
       Пароль: <strong>CT8R3EAE</strong>
     `,
     linkSite: "http://edms-mtuci.herokuapp.com",
@@ -160,31 +143,46 @@ const items: ItemType[] = [
     title: "Вёрстка рандомной информации",
     image: imgBml,
     year: 2019,
-    tags: ["Nuxt.js", "design"],
+    tags: ["Nuxt", "design"],
     text: "Рассказала, что такое модель движения по маршруту Бим-Миддлтон-Левин. Кажется, это нужно было для курсовой и мне показалось смешным заверстать инфу.",
     linkSite: "https://spanri.github.io/bml/",
     linkCode: "https://github.com/Spanri/bml",
   },
-  {
-    id: "about-my-friend",
-    title: "О моём знакомом",
-    image: imgAboutMyFriend,
-    year: 2019,
-    tags: ["react", "design"],
-    text: "Страничка о моём знакомом (там вёрстка).",
-    linkSite: "https://spanri.github.io/react-landing/",
-    linkCode: "https://github.com/Spanri/react-landing",
-  },
-  {
-    id: "about-brother",
-    title: "О моём брате",
-    image: imgAboutMyBrother,
-    year: 2018,
-    tags: ["vanilla", "design"],
-    text: "Презентация, почему мой брат - неудачник (там вёрстка).",
-    linkSite: "https://spanri.github.io/design/",
-    linkCode: "https://github.com/Spanri/design",
-  },
+  // {
+  //   id: "about-my-friend",
+  //   title: "О моём знакомом",
+  //   image: imgAboutMyFriend,
+  //   year: 2019,
+  //   tags: ["react", "design"],
+  //   text: "Страничка о моём знакомом (там вёрстка).",
+  //   linkSite: "https://spanri.github.io/react-landing/",
+  //   linkCode: "https://github.com/Spanri/react-landing",
+  // },
+  // {
+  //   id: "about-brother",
+  //   title: "О моём брате",
+  //   image: imgAboutMyBrother,
+  //   year: 2018,
+  //   tags: ["vanilla", "design"],
+  //   text: "Презентация, почему мой брат - неудачник (там вёрстка).",
+  //   linkSite: "https://spanri.github.io/design/",
+  //   linkCode: "https://github.com/Spanri/design",
+  // },
+  // {
+  //   id: "pstype",
+  //   title: "Психотип водителя",
+  //   image: null,
+  //   year: 2018,
+  //   tags: ["Vue", "Node.js"],
+  //   text: `
+  //     Сервер для мобильного приложения подруги для определения психотипа водителя. Можно
+  //     посмотреть панель администратора, написанную на Vue.js.<br>
+  //     Логин: <strong>admin0</strong><br>
+  //     Пароль: <strong>hardpassword</strong>
+  //   `,
+  //   linkSite: "http://pstype.herokuapp.com",
+  //   linkCode: "https://github.com/Spanri/PS-type",
+  // },
   {
     id: "my-pers",
     title: "О моих персонажах",
@@ -194,16 +192,16 @@ const items: ItemType[] = [
     text: "Не доделано, но я считаю это милым, поэтому можете полюбоваться. Картинки сама рисовала.",
     linkSite: "https://spanri.github.io/first-site/www/pers/pers.html",
   },
-  {
-    id: "my-first-site",
-    title: "Мой первый сайт",
-    image: imgMyFirstSite,
-    year: 2017,
-    tags: ["jquery", "gulp", "design"],
-    text: "Просто забавно, поэтому зацените.",
-    linkSite: "https://spanri.github.io/first-site/www/index.html",
-    linkCode: "https://github.com/Spanri/first-site",
-  },
+  // {
+  //   id: "my-first-site",
+  //   title: "Мой первый сайт",
+  //   image: imgMyFirstSite,
+  //   year: 2017,
+  //   tags: ["jquery", "gulp", "design"],
+  //   text: "Просто забавно, поэтому зацените.",
+  //   linkSite: "https://spanri.github.io/first-site/www/index.html",
+  //   linkCode: "https://github.com/Spanri/first-site",
+  // },
 ];
 
 const getItem = (item: ItemType) => `
