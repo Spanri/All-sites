@@ -1,18 +1,18 @@
 import "./style.scss";
-import imgPortfolio from "./images/portfolio.png";
-import imgOohdesk from "./images/oohdesk.png";
-import imgEdmsNew from "./images/edms-new.png";
-import imgFfmpeg from "./images/ffmpeg.png";
-import imgCustomMap from "./images/custom-map.png";
-import imgFuzzyLogic from "./images/fuzzy-logic.png";
-import imgBml from "./images/bml.png";
-import imgEdms from "./images/edms.png";
-import imgPayments from "./images/payments.png";
-import imgWestBank from "./images/west-bank.png";
-import imgAboutMyFriend from "./images/about-my-friend.png";
-import imgAboutMyBrother from "./images/about-my-brother.png";
-import imgAboutMyPers from "./images/about-my-pers.png";
-import imgMyFirstSite from "./images/my-first-site.png";
+import imgPortfolio from "@/images/portfolio.png";
+import imgOohdesk from "@/images/oohdesk.png";
+import imgEdmsNew from "@/images/edms-new.png";
+import imgFfmpeg from "@/images/ffmpeg.png";
+import imgCustomMap from "@/images/custom-map.png";
+import imgFuzzyLogic from "@/images/fuzzy-logic.png";
+import imgBml from "@/images/bml.png";
+import imgEdms from "@/images/edms.png";
+import imgPayments from "@/images/payments.png";
+import imgWestBank from "@/images/west-bank.png";
+// import imgAboutMyFriend from "@/images/about-my-friend.png";
+// import imgAboutMyBrother from "@/images/about-my-brother.png";
+import imgAboutMyPers from "@/images/about-my-pers.png";
+// import imgMyFirstSite from "@/images/my-first-site.png";
 
 interface ItemType {
   id: string;
