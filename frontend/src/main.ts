@@ -44,12 +44,22 @@ interface ItemType {
 
 const items: ItemType[] = [
   {
+    id: "my-pers",
+    title: "О моих персонажах",
+    image: imgAboutMyPers,
+    year: 2023,
+    tags: ["Vite", "custom_elements", "docker", "typescript", "design"],
+    text: "Переделала свой старый лендинг из 2017 года (https://spanri.github.io/first-site/www/pers/pers.html).<br/>Картинки долго грузятся, но мне уже надоело работать над проектом.<br/>Парочка кастомных элементов (это которые web components).<br/>Если смотрите код - смотрите ветку dev.",
+    linkSite: "https://spanri.github.io/my_characters",
+    linkCode: "https://github.com/Spanri/my_characters",
+  },
+  {
     id: "portfolio",
     title: "Портфолио",
     image: imgPortfolio,
     year: 2022,
     tags: ["Vite", "docker", "design"],
-    text: "Придумала дизайн, заверстала, наполнила контентом.",
+    text: "Придумала дизайн, заверстала, наполнила контентом.<br/>Если смотрите код - смотрите ветку develop.",
     linkSite: "https://spanri.github.io",
     linkCode: "https://github.com/Spanri/Spanri.github.io",
   },
@@ -58,7 +68,7 @@ const items: ItemType[] = [
     title: "Oohdesk DSP",
     image: imgOohdesk,
     year: 2022,
-    tags: ["Vue", "Typescript", "Docker", "design"],
+    tags: ["Vue", "typescript", "docker", "design"],
     text: "Проект на работе. Данные для входа дать не могу, можете посмотреть страницу входа))",
     linkSite: "https://dooh.oohdesk.ru",
   },
@@ -183,15 +193,6 @@ const items: ItemType[] = [
   //   linkSite: "http://pstype.herokuapp.com",
   //   linkCode: "https://github.com/Spanri/PS-type",
   // },
-  {
-    id: "my-pers",
-    title: "О моих персонажах",
-    image: imgAboutMyPers,
-    year: 2017,
-    tags: ["jquery", "design"],
-    text: "Не доделано, но я считаю это милым, поэтому можете полюбоваться. Картинки сама рисовала.",
-    linkSite: "https://spanri.github.io/first-site/www/pers/pers.html",
-  },
   // {
   //   id: "my-first-site",
   //   title: "Мой первый сайт",
